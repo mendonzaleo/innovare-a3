@@ -20,21 +20,62 @@ body{
     padding: 0;
     z-index: 1;
 }
-
+.inicio-content{
+    margin: 10vw;
+}
 .texto-inicio{
-    align-items: center;
+    height: 100%;
+    width: 50%;
+    border-radius: 15px;
     padding-right: 50vh;
     border-color: #f0f0f0;
     padding: 20px;
     background-size: contain;
     z-index: 2;
-    color: #f0f0f0;
-    margin-right: 65vw;
-    margin-top: 30px;
-    margin-left: 60px;
-    margin-bottom: 30px;
+    color: white;
+    font-family: 'Lato', 'sans-serif';
 }
-
+.texto-inicio button{
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+.texto-inicio-header{
+    margin: 0%;
+}
+.texto-inicio-header h1{
+    font-family: 'Lato';
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: extra-expanded;
+    margin: 0;
+}
+.cards ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 0%;
+}
+.cards li{
+    list-style: none;
+    height: 200px;
+    width: 450px;
+    margin-top: 10vh;
+    padding: 20px;
+    backdrop-filter: blur(50px);
+    border-radius: 15px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
