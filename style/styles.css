@@ -1,9 +1,9 @@
 .head {
-    position: fixed;
     top: 0;
     width: 100%;
-    height: 60px;
-    z-index: 1000;
+    height: 20px;
+    z-index: 0;
+    font-size: 160%;
 }
 body{
     margin: 0;
@@ -15,7 +15,7 @@ body{
 }
 .inicio {
     background-image: url('../images/background-image.png');
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
@@ -26,6 +26,7 @@ body{
 }
 .inicio-content{
     margin: 10vw;
+    font-size: 20px;
 }
 .texto-inicio{
     height: 80%;
@@ -33,11 +34,12 @@ body{
     border-radius: 15px;
     padding-right: 50vh;
     border-color: #f0f0f0;
-    padding: 20px;
+    padding: 0px;
     background-size: contain;
     z-index: 2;
     color: #ffffff;
     font-family: 'Lato', 'sans-serif';
+    font-size: larger;
     text-align: left;
 }
 .texto-inicio button{
@@ -49,7 +51,8 @@ body{
     background-color: white;
     color: #072833;
     font-family: 'Lato', sans-serif;
-    font-weight: 800;
+    font-weight: 1000;
+    font-size: large;
     text-align: left;
 }
 .texto-inicio-header{
@@ -65,7 +68,7 @@ body{
 .cards ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 60px;
     justify-items: left;
     align-items: center;
     padding: 0%;
@@ -76,7 +79,8 @@ body{
     width: 300px;
     margin-top: 10vh;
     padding: 20px;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(80px);
+    opacity: 0.99;
     border-radius: 15px;
     display: grid;
     justify-items: left;
@@ -110,33 +114,47 @@ nav ul li a:hover {
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* adiciona rolagem suave à página */
 }
 
 .servicos{
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    gap: 100px; /* espaçamento entre colunas */
+    /*width: 35vw;
+    height: 40vh;
     background-color: #072833;
-    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;*/
+    padding: 20%;
 }
+
+.coluna{
+    flex: 10; /* cada coluna ocupa o mesmo espaço */
+    /*margin: 0;
+    padding: 0;
+    padding-left: 0;
+    text-align: left; 
+    font-size: 1; 
+    border: 0; */
+    height: 80%;
+    width: 50%;  
+}
+
 
 .contato{
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
     background-color: #072833;
     margin: 0;
     display: grid;
     place-items: center;
+    padding: 0;
+    margin-bottom: 20px;
 }
-.sobre {
-    width: 100vw;
-    height: 100vh;
-    background-color: #072833;
-    margin: 0;
-}
+
 .conteudo-contato{
     margin: 10vh;
-    height: 600px;
+    height: 550px;
     border-radius: 15px;
     box-shadow: 0px -4px 28px -7px rgba(0,0,0,0.91);
     background-color: #1d3a46;
@@ -145,6 +163,7 @@ html {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+
 .principal{
         text-align: center;
         font-weight: 5000;
@@ -154,6 +173,7 @@ html {
     font-weight: bold;
     font-weight: 3000;
 }
+
 .box {
     padding: 20px;
     margin: 10px;
@@ -161,6 +181,7 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 .image-box {
     padding: 20px;
     margin: 10px;
@@ -168,13 +189,16 @@ html {
     align-items: center;
     justify-content: center;
 }
-.image-box img{
+
+.image-box img {
     max-width: 100%;
 }
+
 .form-group {
     position: relative;
     margin-bottom: 20px;
-  }
+}
+
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -184,7 +208,7 @@ html {
     align-content: normal;
     background-color: #1d3a46;
     resize: none;
-  }
+}
 .form-group label {
     position: absolute;
     top: 15px;
@@ -192,19 +216,22 @@ html {
     color: #999;
     transition: 0.3s ease all;
     pointer-events: none;
-  }
+}
+
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
 .form-group textarea:not(:placeholder-shown) + label {
-  top: -20px;
-  left: 10px;
-  color: #999;
-  padding: 0 5px;
+    top: -20px;
+    left: 10px;
+    color: #999;
+    padding: 0 5px;
 }
+
 .form-group input:focus {
-  border-color: #007bff;
+    border-color: #007bff;
 }
+
 .form{
     align-items: center;
     justify-content: center;
@@ -214,15 +241,35 @@ html {
     max-height: 300px;
     margin-top: 30px;
 }
+
 .nome{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
-.botao {
+
+.botao-contato {
   width: 107%;
   background: linear-gradient(90deg, #ce22c5 0%, #1cb5e0 100%);
   color: white;
   padding: 10px;
   border-radius: 5px;
+}
+
+
+.sobre {
+    width: 100vw;
+    height: 100vh;
+    background-color: #072833;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.titulo-sobre {
+    font-size: larger;
+}
+
+.coluna-sobre {
+    padding: 100;
+    width: 40vw;
 }
