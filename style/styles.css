@@ -5,6 +5,12 @@
     z-index: 0;
     font-size: 160%;
 }
+
+.head li {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -25,12 +31,12 @@ body{
     z-index: 1;
 }
 .inicio-content{
-    margin: 10vw;
+    margin: 5vw;
     font-size: 20px;
 }
 .texto-inicio{
-    height: 80%;
-    width: 50%;
+    height: 5%;
+    width: 30%;
     border-radius: 15px;
     padding-right: 50vh;
     border-color: #f0f0f0;
@@ -39,10 +45,11 @@ body{
     z-index: 2;
     color: #ffffff;
     font-family: 'Lato', 'sans-serif';
-    font-size: larger;
+    font-size: 15px;
     text-align: left;
 }
 .texto-inicio button{
+    cursor: pointer;
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -51,9 +58,10 @@ body{
     background-color: white;
     color: #072833;
     font-family: 'Lato', sans-serif;
-    font-weight: 1000;
-    font-size: large;
+    font-weight: 10;
+    font-size: 15px;
     text-align: left;
+    margin-bottom: 0;
 }
 .texto-inicio-header{
     margin: 0%;
@@ -62,8 +70,14 @@ body{
     font-family: 'Lato';
     font-weight: 900;
     font-style: normal;
+    font-size: 55px;
     font-stretch: extra-expanded;
-    margin: 0;
+    margin-bottom: 5px;
+}
+.texto-inicio-header p{
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 .cards ul{
     display: grid;
@@ -71,7 +85,7 @@ body{
     gap: 60px;
     justify-items: left;
     align-items: center;
-    padding: 0%;
+    margin-top: 0;
 }
 .cards li{
     list-style: none;
@@ -79,12 +93,14 @@ body{
     width: 300px;
     margin-top: 10vh;
     padding: 20px;
-    backdrop-filter: blur(80px);
+    backdrop-filter: blur(10px);
     opacity: 0.99;
     border-radius: 15px;
+    font-size: 15px;
     display: grid;
     justify-items: left;
     align-items: left;
+    box-sizing: border-box;
 }
 nav ul {
     list-style-type: none;
@@ -118,14 +134,20 @@ html {
 }
 
 .servicos{
+    width: 100%;
+    height: 100vh;
+    padding: 20px 2px 10px 2px;
     display: flex;
-    gap: 100px; /* espaçamento entre colunas */
+    gap: 50px; /* espaçamento entre colunas */
+    margin: 0;
+    border: 30%;
     /*width: 35vw;
     height: 40vh;
     background-color: #072833;
     grid-template-columns: repeat(3, 1fr);
     margin: 0;*/
-    padding: 20%;
+    padding: 10%;
+    box-sizing: border-box;
 }
 
 .coluna{
@@ -137,23 +159,35 @@ html {
     font-size: 1; 
     border: 0; */
     height: 80%;
-    width: 50%;  
+    width: 20%;  
 }
 
 
 .contato{
     width: 100vw;
-    height: 130vh;
+    height: 100vh;
     background-color: #072833;
     margin: 0;
     display: grid;
     place-items: center;
     padding: 0;
     margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.conteudo-contato{
-    margin: 10vh;
+.principal h1 {
+    margin-bottom: 0;
+    font-size: 55px;
+}
+.principal p {
+    margin-bottom: 10;
+    font-size: 15px;
+}
+
+.titulo-contato{
+    margin-top: 0;
     height: 550px;
     border-radius: 15px;
     box-shadow: 0px -4px 28px -7px rgba(0,0,0,0.91);
@@ -162,6 +196,29 @@ html {
     place-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+
+.titulo-contato h2{
+    margin-top: 0;
+}
+
+.titulo-contato h2 sub{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 30vw;
+    padding: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.botao-contato {
+    cursor: pointer;
 }
 
 .principal{
@@ -174,13 +231,6 @@ html {
     font-weight: 3000;
 }
 
-.box {
-    padding: 20px;
-    margin: 10px;
-    margin-bottom: 30px;
-    align-items: center;
-    justify-content: center;
-}
 
 .image-box {
     padding: 20px;
@@ -196,21 +246,23 @@ html {
 
 .form-group {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px;
+    font-size: 15px;
     border: 1px solid #6b6969;
     border-radius: 7px;
-    align-content: normal;
+    align-content: center;
     background-color: #1d3a46;
     resize: none;
 }
 .form-group label {
     position: absolute;
+    font-size: 15px;
     top: 15px;
     left: 12px;
     color: #999;
@@ -222,7 +274,7 @@ html {
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
 .form-group textarea:not(:placeholder-shown) + label {
-    top: -20px;
+    top: 0px;
     left: 10px;
     color: #999;
     padding: 0 5px;
@@ -235,11 +287,11 @@ html {
 .form{
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: auto;
     max-width: 400px;
     height: auto;
     max-height: 300px;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .nome{
@@ -260,16 +312,20 @@ html {
 .sobre {
     width: 100vw;
     height: 100vh;
+    padding-top: 40px; /* somente para separar do contato, mas o ajuste ideal é no box do contato */
     background-color: #072833;
     margin-bottom: 20px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .titulo-sobre {
-    font-size: larger;
+    font-size: 55px;
+    text-align: center;
 }
 
 .coluna-sobre {
-    padding: 100;
+    font-size: 15px;
     width: 40vw;
+    padding-left: 40px;
 }
