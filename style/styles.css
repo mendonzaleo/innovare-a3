@@ -1,10 +1,24 @@
 @media (max-width: 450px) {
-  section {
+  header{
+    display: grid;
+    justify-content: center;
     width: 100%;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  p{
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  section {
+  .header{
+    width: 100%;
+  }.section {
+    width: 100%;
+  }
+  .footer{
     width: 100%;
   }
 }
@@ -141,18 +155,27 @@ html {
 }
 .colunas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  grid-template-columns: repeat(3, auto);
+  gap: auto;
   justify-content: center;
 }
-.coluna {
-  display: grid;
-  margin: 2%;
-  padding: 5px;
-  text-align: left;
-  font-size: 1;
+.colunas ul{
+  padding-left: 3px;
+  margin: 0;
+  justify-content: center;
 }
-
+.colunas li {
+  display: grid;
+  padding: 2%;
+  text-align: left;
+  justify-content: left;
+  font-size: 18px;
+  max-width: 85%;
+}
+.colunas h1{
+  font-size: 50px;
+  width: 60%;
+}
 .contato {
   width: 85%;
   background-color: #2b2b2b;
@@ -288,6 +311,7 @@ html {
   padding: 10px;
   border: 1px solid #6b6969;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .sobre {
@@ -360,4 +384,5 @@ html {
 }
 .menu li{
   padding: 7px;
+  cursor: pointer;
 }
