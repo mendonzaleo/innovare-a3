@@ -8,11 +8,6 @@
     width: 100%;
   }
 }
-@media (max-width: 450px) {
-  section {
-    width: 100%;
-  }
-}
 .head {
   top: 0;
   width: 100%;
@@ -26,7 +21,6 @@
   color: rgb(255, 255, 255);
 }
 body {
-  margin: 0;
   font-family: "Roboto", "sans-serif";
   color: #f0f0f0;
   background-color: #2b2b2b;
@@ -49,31 +43,17 @@ body {
 }
 .texto-inicio {
   height: 10%;
-  width: 40%;
-  margin-top: 10%;
+  width: 32%;
+  margin-top: 15%;
+  margin-left: 2%;
   border-radius: 15px;
   border-color: #f0f0f0;
   background-size: contain;
   z-index: 2;
   color: #ffffff;
   font-family: "Lato", "sans-serif";
-  font-size: 15px;
+  font-size:larger;
   text-align: left;
-}
-.texto-inicio button {
-  cursor: pointer;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px;
-  border-radius: 15px;
-  background-color: white;
-  color: #072833;
-  font-family: "Lato", sans-serif;
-  font-weight: 10;
-  font-size: 15px;
-  text-align: left;
-  margin-bottom: 0;
 }
 .texto-inicio-header {
   margin: 0%;
@@ -86,7 +66,7 @@ body {
   font-stretch: extra-expanded;
   margin-bottom: 5px;
 }
-.texto-inicio-header p {
+.texto-inicio p {
   font-size: 15px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -98,7 +78,7 @@ body {
   gap: 5px;
   justify-items: left;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 6%;
 }
 
 .cards li {
@@ -162,19 +142,19 @@ html {
 .colunas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 3px;
   justify-content: center;
 }
 .coluna {
   display: grid;
   margin: 2%;
-  padding: 1%;
+  padding: 5px;
   text-align: left;
   font-size: 1;
 }
 
 .contato {
-  width: 100%;
+  width: 85%;
   background-color: #2b2b2b;
   display: grid;
   justify-content: center;
@@ -191,27 +171,29 @@ html {
 }
 
 .titulo-contato {
-  margin: 10%;
+  margin: 5%;
+  padding-bottom: 2%;
   width: 100%;
   border-radius: 15px;
   box-shadow: 0px -4px 28px -7px rgba(0, 0, 0, 0.91);
   background-color: #2b2b2b;
   display: grid;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
 .box header {
-  margin-bottom: 10%;
+  margin-bottom: 7%;
   margin-top: 5%;
   justify-items: left;
 }
 
 .box {
-  width: 80%;
+  width: 100%;
   padding: 20px;
-  margin: 10px;
+  margin: 5px;
   margin-bottom: 30px;
   display: grid;
   align-items: center;
@@ -274,9 +256,11 @@ html {
   top: 0px;
   left: 10px;
   color: #999;
-  padding: 0 5px;
+  padding: 0 7px;
 }
-
+.form-group input{
+  color: white;
+}
 .form-group input:focus {
   border-color: #007bff;
 }
@@ -308,7 +292,6 @@ html {
 
 .sobre {
   width: 100%;
-  height: 100vh;
   padding-top: 40px; /* somente para separar do contato, mas o ajuste ideal é no box do contato */
   background-color: #2b2b2b;
   margin-bottom: 20px;
@@ -320,9 +303,61 @@ html {
   font-size: 55px;
   text-align: center;
 }
-
+.box-sobre{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 70px;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.box-sobre img{
+  width: 100%;
+  height: 100%;
+}
 .coluna-sobre {
-  font-size: 15px;
-  width: 40vw;
-  padding-left: 40px;
+  font-size: 21px;
+  width: 80%;
+}
+.rodape{
+  margin:10%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+.logo h2{
+  font-size: 30px;
+  font-weight: bold;
+}
+.listas{
+  grid-template-columns: repeat(2, auto);
+  gap: 60px;
+  display: grid;
+  justify-content: end;
+}
+.listas p{
+  color: #FBD784;
+}
+.redes-sociais{
+  list-style: none;
+}
+.redes-sociais li{
+  padding: 7px;
+}
+.ig{
+  list-style-image: url("../images/ig-logo.png");
+}
+.fb{
+  list-style-image: url("../images/fb-logo.png");
+}
+.wpp{
+  list-style-image: url("../images/wpp-logo.png");
+}
+.email{
+  list-style-image: url("../images/email-logo.png");
+}
+.menu{
+  list-style: none;
+}
+.menu li{
+  padding: 7px;
 }
