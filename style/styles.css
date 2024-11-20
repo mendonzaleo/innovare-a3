@@ -1,33 +1,13 @@
-@media (max-width: 450px) {
-  header{
-    display: grid;
-    justify-content: center;
-    width: 100%;
-  }
-  img{
-    width: 100%;
-    height: auto;
-  }
-  p{
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header{
-    width: 100%;
-  }.section {
-    width: 100%;
-  }
-  .footer{
-    width: 100%;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
 }
 .head {
   top: 0;
   width: 100%;
   height: 20px;
-  z-index: 0;
-  font-size: 160%;
+  font-size: 1.5em;
 }
 
 .head li {
@@ -38,7 +18,9 @@ body {
   font-family: "Roboto", "sans-serif";
   color: #f0f0f0;
   background-color: #2b2b2b;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  width: 100%;
 }
 
 .inicio {
@@ -46,20 +28,24 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 20%;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  display: grid;
+  place-items: center;
 }
 
 .inicio-content {
   margin: 5%;
+  padding: 2%;
   font-size: 20px;
+  max-width: 100%;
 }
 .texto-inicio {
   height: 10%;
-  width: 32%;
+  max-width: 50%;
   margin-top: 15%;
-  margin-left: 2%;
+  margin-left: 5%;
   border-radius: 15px;
   border-color: #f0f0f0;
   background-size: contain;
@@ -69,42 +55,40 @@ body {
   font-size:larger;
   text-align: left;
 }
-.texto-inicio-header {
-  margin: 0%;
-}
 .texto-inicio-header h1 {
   font-family: "Lato";
-  font-weight: 900;
-  font-style: normal;
-  font-size: 55px;
-  font-stretch: extra-expanded;
+  font-weight: bold;
+  font-size: 3.6em;
   margin-bottom: 5px;
 }
 .texto-inicio p {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 40px;
 }
-
+.cards{
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
 .cards ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  justify-items: left;
-  align-items: center;
-  margin-top: 6%;
+  grid-template-columns: 1fr;
+  gap: 2%;
+  place-items: center;
+  margin-top: 2%;
+  width: 90%;
 }
-
 .cards li {
   list-style: none;
-  height: 200px;
-  width: 400px;
   margin-top: 2%;
-  padding: 20px;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: 16px;
   display: grid;
   justify-items: left;
   align-items: left;
@@ -112,7 +96,13 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
-
+.cards ul li h3{
+  margin-bottom: 4%;
+  font-size: 18px;
+}
+.cards ul li p{
+  font-size: 15px;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -125,7 +115,7 @@ nav ul li {
   display: inline;
   margin: 0 15px;
   color: #f0f0f0;
-  margin: 40px;
+  margin: 2%;
   font-weight: 800;
   font-size: large;
 }
@@ -135,78 +125,103 @@ nav ul li a {
   text-decoration: none;
   font-size: 18px;
 }
-
-nav ul li a:hover {
-  color: #f0f0f0;
-}
-
 html {
-  scroll-behavior: smooth; /* adiciona rolagem suave à página */
+  scroll-behavior: smooth;
 }
-
 .servicos {
   width: 100%;
-  padding: 5%;
+  margin-top: 5%;
+  padding: 3%;
+  padding-bottom: 50%;
   border: 2px;
   background-color: #2b2b2b;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  display: grid;
+  place-items: center;
 }
 .colunas {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: auto;
+  grid-template-columns: 1fr;
+  gap: 2%;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .colunas ul{
   padding-left: 3px;
   margin: 0;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+}
+.colunas img{
+  width: 100%;
+  height: auto;
 }
 .colunas li {
   display: grid;
   padding: 2%;
-  text-align: left;
-  justify-content: left;
-  font-size: 18px;
+  text-align: center;
+  justify-content: center;
   max-width: 85%;
 }
-.colunas h1{
-  font-size: 50px;
-  width: 60%;
-}
-.contato {
-  width: 85%;
-  background-color: #2b2b2b;
+.colunas ul{
   display: grid;
   justify-content: center;
+}
+.colunas h1{
+  font-size: 3.5em;
+  font-weight:bold;
+  width: 80%;
+  margin-bottom: 10%;
+  text-align: left;
+}
+.colunas li p{
+  font-size: 1.3em;
+  text-align: left;
+}
+.colunas h2{
+  font-size: 2em;
+}
+.contato {
+  width: 90%;
+  background-color: #2b2b2b;
+  justify-content: center;
   padding: 5%;
+  display: grid;
+  place-items: center;
 }
 
 .principal h1 {
   margin-bottom: 0;
-  font-size: 55px;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 .principal p {
   margin-bottom: 10;
-  font-size: 15px;
+  font-size: 1.2em;
 }
 
 .titulo-contato {
-  margin: 5%;
+  margin: 10%;
   padding-bottom: 2%;
   width: 100%;
   border-radius: 15px;
   box-shadow: 0px -4px 28px -7px rgba(0, 0, 0, 0.91);
   background-color: #2b2b2b;
   display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%;
 }
-
+.titulo-contato h2{
+  font-size: 1.7em;
+  margin-bottom: 3%;
+}
+.titulo-contato p{
+  font-size: 1em;
+}
 .box header {
   margin-bottom: 7%;
   margin-top: 5%;
@@ -214,16 +229,15 @@ html {
 }
 
 .box {
-  width: 100%;
+  width: 140%;
   padding: 20px;
-  margin: 5px;
+  margin-left: 85%;
   margin-bottom: 30px;
   display: grid;
   align-items: center;
   justify-content: center;
   font-size: 15px;
 }
-
 .principal {
   text-align: center;
   font-weight: 5000;
@@ -238,8 +252,11 @@ html {
   padding: 20px;
   margin: 10px;
   margin-bottom: 30px;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  height: 90%;
+  display: grid;
+  width: 32%;
+  opacity: 0;
 }
 
 .image-box img {
@@ -316,50 +333,69 @@ html {
 
 .sobre {
   width: 100%;
-  padding-top: 40px; /* somente para separar do contato, mas o ajuste ideal é no box do contato */
   background-color: #2b2b2b;
-  margin-bottom: 20px;
   overflow: hidden;
   box-sizing: border-box;
+  display: grid;
+  place-items: center;
 }
 
 .titulo-sobre {
-  font-size: 55px;
+  font-size: 2.5em;
   text-align: center;
+  font-weight: bold;
 }
 .box-sobre{
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 70px;
+  place-items: center;
+  gap: 5%;
   margin-right: 10%;
   margin-left: 10%;
   margin-top: 5%;
+  width: 100%;
 }
 .box-sobre img{
-  width: 100%;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  width: 90%;
   height: 100%;
+  border-radius: 15px;
+  margin-left: 6%;
 }
-.coluna-sobre {
-  font-size: 21px;
-  width: 80%;
+.coluna-sobre{
+  width: 90%;
+}
+.coluna-sobre p{
+  font-size: 1.2em;
+  padding-bottom: 11%;
 }
 .rodape{
-  margin:10%;
+  width: 100%;
+  height: 50vh;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  place-items: center;
+}
+.logo{
+  justify-self: baseline;
+  margin: 5%;
 }
 .logo h2{
   font-size: 30px;
   font-weight: bold;
 }
 .listas{
-  grid-template-columns: repeat(2, auto);
-  gap: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10%;
   display: grid;
-  justify-content: end;
+  justify-content: center;
 }
 .listas p{
   color: #FBD784;
+  font-size: 1.5em;
+}
+.listas h2{
+  font-size: 2.5em;
 }
 .redes-sociais{
   list-style: none;
@@ -381,8 +417,140 @@ html {
 }
 .menu{
   list-style: none;
+  width: 100%;
 }
 .menu li{
   padding: 7px;
   cursor: pointer;
+}
+@media (min-width: 1024px){
+  .inicio{
+    padding-bottom: 0%;
+  }
+  .servicos{
+    margin-top: 10%;
+    padding-bottom: 0%;
+  }
+  .cards ul{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .cards li h3{
+    font-size: 18px;
+  }
+  .cards li p{
+    font-size: 18px;
+  }
+  .colunas{
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 3%
+  }
+  .colunas ul{
+    padding: 0%;
+  }
+  .colunas ul li p{
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 110%;
+  }
+  .colunas ul li img{
+    width: 100%;
+    justify-self: center;
+  }
+  .box{
+    width: 100%;
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .image-box{
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    opacity: 1;
+  }
+   .box-sobre{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 90%;
+  }
+  .box-sobre img{
+    width: 100%;
+    height: 150%;
+  }
+  .coluna-sobre{
+    width: 90%;
+    max-height: 90%;
+  } 
+  .coluna-sobre p{
+    font-size: 1.4em;
+  }
+  .rodape{
+    grid-template-columns: repeat(2, auto);
+  }
+  .logo{
+    justify-self: center;
+  }
+  .logo h2{
+    font-size: 3em;
+  }
+  .listas{
+    justify-self: center;
+    margin-right: 10%;
+    gap: 30%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+  .servicos{
+    padding-bottom: 20%;
+  }
+  .rodape{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .colunas ul li img{
+    width: 125%;
+    justify-self: center;
+  }
+  .colunas ul li p{
+    padding-left: 5%;
+    padding-right: 3%;
+  }
+  .colunas h1{
+    padding-left: 7%;
+    padding-right: 5%;
+  }
+  .box{
+    width: 140%;
+    padding: 20px;
+    margin-left: 45%;
+    margin-bottom: 30px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .image-box{
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-self: right;
+    width: 40%;
+    opacity: 1;
+  }
+  .coluna-sobre p{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
